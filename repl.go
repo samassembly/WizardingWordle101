@@ -20,7 +20,7 @@ func startRepl() {
 
 		commandName := words[0]
 
-
+		// for longer commands
 		// input := ""
 		// if len(words) > 1 {
 		// 	input = words[1]
@@ -55,6 +55,11 @@ type cliCommand struct {
 
 func getCommands() map[string]cliCommand {
 	return map[string]cliCommand{
+		"start": {
+			name:			"start",
+			description:	"Start a round of guessing!",
+			callback:		commandStart,
+		},
 		"help": {
 			name:	 		"help",
 			description:	"Displays a help message",
