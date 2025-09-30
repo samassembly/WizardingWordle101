@@ -65,11 +65,6 @@ func getCommands() map[string]cliCommand {
 			description:	"Bot Login for API references",
 			callback:		commandLogin,
 		},
-		"ref": {
-			name: 			"ref",
-			description:	"reference wiki for spell info",
-			callback:		commandRef,
-		},
 		"help": {
 			name:	 		"help",
 			description:	"Displays a help message",
