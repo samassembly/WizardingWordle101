@@ -60,11 +60,6 @@ func getCommands() map[string]cliCommand {
 			description:	"Start a round of guessing!",
 			callback:		commandStart,
 		},
-		"login": {
-			name: 			"login",
-			description:	"Bot Login for API references",
-			callback:		commandLogin,
-		},
 		"help": {
 			name:	 		"help",
 			description:	"Displays a help message",
