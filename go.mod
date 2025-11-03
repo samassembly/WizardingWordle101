@@ -1,4 +1,4 @@
-module github.com/samassembly/WizardWordle101
+module github.com/samassembly/WizardingWordle101
 
 go 1.24.1
 

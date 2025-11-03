@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"github.com/samassembly/wizardingwordle101/internal/config"
+	"github.com/samassembly/WizardingWordle101/internal/config"
 )
 
 func main() {
@@ -17,6 +17,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to set current user: %v", err)
 	}
-	
+
 	startRepl()
 }
