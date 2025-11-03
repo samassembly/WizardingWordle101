@@ -5,6 +5,8 @@ go 1.24.1
 require (
 	cgt.name/pkg/go-mwclient v1.3.0 // indirect
 	github.com/antonholmquist/jason v1.0.0 // indirect
+	github.com/google/uuid v1.6.0 // indirect
+	github.com/lib/pq v1.10.9 // indirect
 	github.com/mrjones/oauth v0.0.0-20190623134757-126b35219450 // indirect
 	github.com/ysmood/fetchup v0.2.3 // indirect
 	github.com/ysmood/goob v0.4.0 // indirect

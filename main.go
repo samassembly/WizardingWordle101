@@ -4,10 +4,12 @@ import (
 	//"fmt"
 	"log"
 	"os"
+	_ "github.com/lib/pq"
 	"github.com/samassembly/WizardingWordle101/internal/config"
 )
 
 type state struct {
+	db *database.Queries
 	cfg *config.Config
 }
 
