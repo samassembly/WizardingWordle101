@@ -8,12 +8,14 @@ import (
 )
 
 func startRepl() {
+	//Fun Banner to indicate new cli has been entered
 	printAsciiBanner()
 	reader := bufio.NewScanner(os.Stdin)
 	for {
 		fmt.Print("WizWord101 > ")
 		reader.Scan()
 
+		//input validation
 		words := CleanInput(reader.Text())
 		if len(words) == 0 {
 			continue
@@ -27,6 +29,7 @@ func startRepl() {
 		// 	input = words[1]
 		// }
 
+		//check if command exists
 		command, exists := getCommands()[commandName]
 		if exists {
 			err := command.callback()
@@ -41,19 +44,21 @@ func startRepl() {
 	}
 }
 
+//formats text input for ease of comparisons
 func CleanInput(text string) []string {
 	output := strings.ToLower(text)
 	words := strings.Fields(output)
 	return words
 }
 
+//command structure within repl loop
 type cliCommand struct {
 	name		string
 	description	string
 	callback	func() error
 }
 
-
+//prints commands available within repl
 func getCommands() map[string]cliCommand {
 	return map[string]cliCommand{
 		"start": {
