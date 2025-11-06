@@ -4,7 +4,7 @@ import(
 	"fmt"
 )
 
-func commandHelp() error {
+func commandHelp(s *state) error {
 	printAsciiBanner()
 	fmt.Println("")
 	fmt.Println("Welcome to the Spiral!")

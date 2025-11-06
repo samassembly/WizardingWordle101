@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func startRepl() {
+func startRepl(s *state) {
 	//Fun Banner to indicate new cli has been entered
 	printAsciiBanner()
 	reader := bufio.NewScanner(os.Stdin)
@@ -22,17 +22,11 @@ func startRepl() {
 		}
 
 		commandName := words[0]
-		
-		// for longer commands
-		// input := ""
-		// if len(words) > 1 {
-		// 	input = words[1]
-		// }
 
 		//check if command exists
 		command, exists := getCommands()[commandName]
 		if exists {
-			err := command.callback()
+			err := command.callback(s)
 			if err != nil {
 				fmt.Println(err)
 			}
@@ -55,7 +49,7 @@ func CleanInput(text string) []string {
 type cliCommand struct {
 	name		string
 	description	string
-	callback	func() error
+	callback	func(s *state) error
 }
 
 //prints commands available within repl

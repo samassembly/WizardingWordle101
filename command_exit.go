@@ -5,7 +5,7 @@ import(
 	"os"
 )
 
-func commandExit() error {
+func commandExit(s *state) error {
 	fmt.Println("Leaving the Spiral... Goodbye!")
 	os.Exit(0)
 	return nil
