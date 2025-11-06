@@ -8,6 +8,7 @@ import (
 )
 
 func startRepl() {
+	printAsciiBanner()
 	reader := bufio.NewScanner(os.Stdin)
 	for {
 		fmt.Print("WizWord101 > ")

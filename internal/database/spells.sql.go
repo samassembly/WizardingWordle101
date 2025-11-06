@@ -29,9 +29,9 @@ type CreateSpellParams struct {
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
 	Cost        int32
-	SpellSchool NullSchool
+	SpellSchool string
 	Accuracy    int32
-	SpellType   NullSType
+	SpellType   string
 }
 
 func (q *Queries) CreateSpell(ctx context.Context, arg CreateSpellParams) (Spell, error) {
