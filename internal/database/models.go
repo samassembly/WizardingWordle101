@@ -8,6 +8,8 @@ import (
 	"database/sql/driver"
 	"fmt"
 	"time"
+
+	"github.com/google/uuid"
 )
 
 type SType string
@@ -117,4 +119,11 @@ type Spell struct {
 	SpellSchool NullSchool
 	Accuracy    int32
 	SpellType   NullSType
+}
+
+type User struct {
+	ID        uuid.UUID
+	CreatedAt time.Time
+	UpdatedAt time.Time
+	Name      string
 }
