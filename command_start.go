@@ -23,8 +23,8 @@ func commandStart(s *state) error {
 		//check if guess exists in db
 		spell, err := s.db.GetSpell(context.Background(), guess)
 		if err != nil {
-			fmt.Printf("That spell has not been taught in class!")
-			fmt.Printf(guess)
+			fmt.Printf("Remember case matters, It's leviOsa, not levioSA! Try again!")
+			//fmt.Printf(guess)
 			continue
 		}
 
