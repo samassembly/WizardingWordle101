@@ -19,7 +19,6 @@ This project requires **Go**, **PostgreSQL**, and **Goose** for database migrati
      sudo apt-get update
      sudo apt-get install golang
      ```
-   - **Windows**: Use the MSI installer from the Go website.
    
 Verify installation:  
     ```bash
@@ -32,7 +31,7 @@ Verify installation:
      sudo apt-get install postgresql postgresql-contrib
      sudo service postgresql start
      ```
-     
+
 Verify installation:  
     ```bash
     psql --version
@@ -76,10 +75,12 @@ Available Dev commands:
 User created successfully:
  * ID:      c5c9c70d-721c-42e8-82df-1df5ef80fe9b
  * Name:    S@m
+
 #Change current user
 ./WizardingWordle101 login <name>
 
 User switched successfully!
+
 #List all users
 ./WizardingWordle101 users
 
