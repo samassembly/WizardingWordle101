@@ -2,7 +2,7 @@
 
 Inspired by Wordle, guess a spell from the world of Wizard101. Narrow down your guesses by paying attention to the Cost, School, Accuracy, and Type attributes. If you can guess the secret spell within 5 guesses, you win!
 
-## 🧙‍♂️ Motiviation
+## 🧙‍♂️ Motivation
 
 As an avid enjoyer of Wizard101, I struggle to introduce new friends to the 10+ year old MMO due to the overwhelming amount of content the game has to offer. I decided to ease them into the game with a series of companion applications to help learn the game and its mechanics. WizardingWordle101 is designed to provide a fun daily challenge that reinforces knowledge of spells across all classes to better a user's combat potential. Understanding what spells might be cast at you is key to becoming a masterful practitioner of magic!
 
