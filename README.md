@@ -29,13 +29,62 @@ Verify installation:
 - **Linux**:  
      ```bash
      sudo apt-get install postgresql postgresql-contrib
-     sudo service postgresql start
      ```
 
 Verify installation:  
     ```bash
     psql --version
     ```
+
+### Postgres Setup
+```bash
+#Update your postgres password
+sudo passwd postgres
+
+#Start Postgres Server
+sudo service postgresql start
+
+#Enter psql shell
+sudo -u postgres psql
+
+#Create & Connect to database
+CREATE DATABASE wizword101;
+\c wizword101
+
+#Set Password and Verify
+ALTER USER postgres PASSWORD 'password';
+SELECT version();
+
+#Leave psql
+exit
+```
+### Goose Database Migrations
+Install Goose:
+```bash
+go install github.com/pressly/goose/v3/cmd/goose@latest
+```
+
+Determine your Connection String
+```bash
+'postgres://<username>:<password>@localhost:5432/wizword101?sslmode=disable'
+
+#Test connection string
+psql 'postgres://<username>:<password>@localhost:5432/wizword101'
+```
+
+Run Up Migrations
+```bash
+cd wizardingwordle101/sql/schema
+goose postgres <connection_string> up
+
+#Verify User and Spell tables exist
+psql wizword101
+\dt
+```
+
+### Create Configuration file
+Create a config file in your root directory called `.w101config.json` with the following content:
+`{"db_url":"postgres://<username>:<password>@localhost:5432/wizword101?sslmode=disable","current_user_name":""}` 
 
 ### 2. Initialization
 Register yourself as a player to start playing:
