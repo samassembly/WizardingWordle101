@@ -4,7 +4,7 @@ Inspired by Wordle, guess a spell from the world of Wizard101. Narrow down your 
 
 As an avid enjoyer of Wizard101, I struggle to introduce new friends to the 10+ year old MMO due to the overwhelming amount of content the game has to offer. I decided to ease them into the game with a series of companion applications to help learn the game and its mechanics. WizardingWordle101 is designed to provide a fun daily challenge that reinforces knowledge of spells across all classes to better a user's combat potential. Understanding what spells might be cast at you is key to becoming a masterful practitioner of magic!
 
-<img src="https://github.com/samassembly/WizardingWordle101/images/WizWordDemo" width="100%" alt="WizardingWordle101 demo image">
+<img src="https://github.com/samassembly/WizardingWordle101/blob/main/images/WizWordDemo.png" width="100%" alt="WizardingWordle101 demo image">
 
 ## Quick Start
 
